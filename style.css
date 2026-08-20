@@ -1,0 +1,365 @@
+/* =========================
+   CÀI ĐẶT CHUNG
+========================= */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    transition: background 0.3s ease;
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+    width: 420px;
+    max-width: 90%;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    box-sizing: border-box;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   AVATAR
+========================= */
+
+.profile-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    display: block;
+    margin: 0 auto 20px;
+
+    background: #f2f2f2;
+}
+
+
+/* =========================
+   TIÊU ĐỀ
+========================= */
+
+h1 {
+    color: #222;
+    margin: 0 0 10px;
+    font-size: 30px;
+}
+
+h2 {
+    color: #222;
+    margin-top: 0;
+}
+
+h3 {
+    color: #222;
+}
+
+
+/* =========================
+   ĐOẠN VĂN
+========================= */
+
+p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NÚT
+========================= */
+
+button {
+    margin-top: 20px;
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #222;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+
+.social-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-buttons button {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.social-buttons a {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.social-buttons a {
+    text-decoration: none;
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    background: #222;
+    color: white;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.social-buttons a:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+
+/* =========================
+   VỀ MÌNH
+========================= */
+
+.about {
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid #ddd;
+}
+
+.about h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.about p {
+    line-height: 1.6;
+    color: #666;
+}
+
+
+/* =========================
+   KỸ NĂNG
+========================= */
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.skill-list span {
+    padding: 8px 14px;
+
+    background: #f2f2f2;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+    color: #333;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.skill-list span:hover {
+    transform: translateY(-3px);
+    background: #ddd;
+}
+
+
+/* =========================
+   DỰ ÁN
+========================= */
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.project-card {
+    min-height: 130px;
+
+    padding: 20px;
+
+    background: #f7f7f7;
+
+    border-radius: 15px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-card h3 {
+    margin: 0 0 8px;
+}
+
+.project-card p {
+    margin: 0;
+
+    font-size: 15px;
+}
+
+
+
+.contact-box {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 15px;
+}
+.contact-box h2 {
+    margin-top: 0;
+}
+
+.contact-box button {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   ĐIỆN THOẠI
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 0;
+        align-items: flex-start;
+    }
+
+    .profile-card {
+        width: 92%;
+        max-width: 420px;
+
+        padding: 25px;
+    }
+
+    .profile-card img {
+        width: 130px;
+        height: 130px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .project-card {
+        min-height: 130px;
+        padding: 15px;
+    }
+
+    .social-buttons {
+        gap: 8px;
+    }
+
+    .social-buttons a {
+        padding: 9px 14px;
+        font-size: 14px;
+    }
+    .social-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.social-buttons a,
+.social-buttons button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 6px;
+    font-size: 14px;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .social-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .social-buttons button {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .social-buttons a {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
